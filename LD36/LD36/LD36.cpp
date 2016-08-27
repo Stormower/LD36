@@ -9,10 +9,14 @@
 int main()
 {
 	using namespace std;
-	/*
+
  
 	sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-
+	string command;
+	int nWorkers = 0;
+	int gold = 0;
+	sf::Clock clock;
+	sf::Time newTime, oldTime;
 	while (window.isOpen())
 	{
 		sf::Event event;
@@ -20,24 +24,41 @@ int main()
 		{
 			if (event.type == sf::Event::Closed)
 				window.close();
+			if (event.type == sf::Event::KeyPressed)
+			{
+				switch (event.key.code)
+				{
+				case (sf::Keyboard::Key::W): 
+					nWorkers++;
+					cout << "recruited a worker" << endl;
+					break;
+				case (sf::Keyboard::Key::D):
+					cout << "There are " << nWorkers << " Workers \r\n";
+					break;
+				}
+
+			}
 		}
+	
+
+		sf::Time elapsed = clock.getElapsedTime();
+		newTime = elapsed;
+		//cout << (newTime.asMilliseconds() - oldTime.asMilliseconds()) << endl;
+		if ((newTime.asMilliseconds() - oldTime.asMilliseconds()) >= 1000)
+		{
+			cout << "You have " << gold << " gold \r\n";
+			oldTime = newTime;
+			gold += nWorkers;
+		}
+		
 
 		window.clear();
 		window.display();
-	}*/
-	string command;
-	int nWorkers = 0;
+	}
+	
 	while (1)
 	{
-		cin >> command;
-		if (command == "w")
-		{
-			nWorkers++;
-		}
-		if (command == "displayw")
-		{
-			cout << "There are " << nWorkers << "Workers \r\n";
-		}
+	
 	}
 	return 0;
 }
