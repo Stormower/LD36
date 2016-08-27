@@ -9,8 +9,7 @@
 int main()
 {
 	using namespace std;
-
- 
+	 
 	sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
 	string command;
 	int nWorkers = 0;
