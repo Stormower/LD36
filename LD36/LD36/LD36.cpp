@@ -50,8 +50,7 @@ int main()
 			oldTime = newTime;
 			gold += nWorkers;
 		}
-		
-
+	
 		window.clear();
 		window.display();
 	}
