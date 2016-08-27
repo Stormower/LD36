@@ -1,10 +1,12 @@
+#include "stdafx.h"
+#include <SFML\Graphics.hpp>
 class Map: public sf::Drawable {
 private:
 
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const
 	{
 		// on applique la transformation
-		states.transform *= getTransform();
+		//states.transform *= getTransform();
 
 		// on applique la texture du tileset
 		states.texture = &m_tileset;
@@ -15,5 +17,4 @@ private:
 
 	sf::VertexArray m_vertices;
 	sf::Texture m_tileset;
-};
 };

@@ -1,8 +1,7 @@
-
 #include "stdafx.h"
 #include <iostream>
 #include <string>
-#include "game.cpp"
+#include "game.hpp"
 using namespace std;
 
 int main()
