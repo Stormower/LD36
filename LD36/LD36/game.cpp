@@ -1,19 +1,5 @@
-#include <SFML/Graphics.hpp>
-#include <SFML/Window.hpp>
-#include <string>
-
-class Game {
-private:
-	sf::RenderWindow m_Window;
-
-public:
-	Game();
-	void init();
-	void run();
-	void draw();
-	void update();
-	void render();
-};
+#include "stdafx.h"
+#include "game.hpp"
 
 Game::Game()
 	: m_Window(sf::VideoMode(500, 400), "Stratege") {
@@ -53,10 +39,12 @@ void Game::update() {
 			switch (event.key.code)
 			{
 			case (sf::Keyboard::Key::W) :
-				nWorkers++;
+				m_Player.addWorker(1);
 				std::cout << "recruited a worker" << std::endl;
+				
 				break;
 			case (sf::Keyboard::Key::D) :
+				nWorkers = m_Player.getnWorkers();
 				std::cout << "There are " << nWorkers << " Workers \r\n";
 				break;
 			}

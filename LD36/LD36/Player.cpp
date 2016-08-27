@@ -1,27 +1,17 @@
-#include <string>
-#include <map>
-#include <vector>
-using namespace std;
-class Player
+#include "stdafx.h"
+#include "Player.hpp"
+
+int Player::getGold()
 {
-private:
-	string m_Name;
-	int m_Gold;
-	int m_nWorkers;
-	map <string, bool> m_Researches;
-	//vector m_Units;
-	int m_Life = 10000;
+	return m_Gold;
+}
 
-public:
-	void initResearches();
-	void addWorker(int);
-	void takeDamage(int);
-	void heal(int);
-	void earnGolds(int);
-	void addResearche(string);
-};
+int Player::getnWorkers()
+{
+	return m_nWorkers;
+}
 
-voi  Player::initResearches()
+void  Player::initResearches()
 {
 	m_Researches["r1"] = 0;
 	m_Researches["r2"] = 0;
