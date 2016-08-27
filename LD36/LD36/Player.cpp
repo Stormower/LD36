@@ -36,9 +36,9 @@ void Player::heal(int heal)
 	m_Life += heal;
 }
 
-void Player::earnGolds(int gold)
+void Player::earnGolds()
 {
-	m_Gold += gold;
+	m_Gold += m_nWorkers;
 }
 
 void Player::addResearche(string researchName)

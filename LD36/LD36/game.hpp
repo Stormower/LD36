@@ -10,12 +10,14 @@ class Game {
 private:
 	sf::RenderWindow m_Window;
 	Player m_Player;
+	sf::Time m_NewTime, m_OldTime;
+	sf::Clock m_Clock;
 
 public:
 	Game();
 	void init();
 	void run();
 	void draw();
-	void update();
+	void update(sf::Time);
 	void render();
 };

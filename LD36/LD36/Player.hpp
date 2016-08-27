@@ -20,7 +20,7 @@ public:
 	void addWorker(int);
 	void takeDamage(int);
 	void heal(int);
-	void earnGolds(int);
+	void earnGolds();
 	void addResearche(string);
 	int getnWorkers();
 	int getGold();
