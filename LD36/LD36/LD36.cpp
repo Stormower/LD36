@@ -3,12 +3,15 @@
 
 #include "stdafx.h"
 #include <SFML/Graphics.hpp>
+#include <iostream>
+#include <string>
 
 int main()
 {
+	using namespace std;
+	/*
+ 
 	sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-	sf::CircleShape shape(100.f);
-	shape.setFillColor(sf::Color::Green);
 
 	while (window.isOpen())
 	{
@@ -20,9 +23,22 @@ int main()
 		}
 
 		window.clear();
-		window.draw(shape);
 		window.display();
-	}
+	}*/
+	string command;
+	int nWorkers = 0;
+	while (1)
+	{
 
+		cin >> command;
+		if (command == "w")
+		{
+			nWorkers++;
+		}
+		if (command == "displayw")
+		{
+			cout << "There are " << nWorkers << "Workers \r\n";
+		}
+	}
 	return 0;
 }
