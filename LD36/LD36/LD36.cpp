@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 #include <SFML/Graphics.hpp>
+#include "game.cpp"
 
 int main()
 {
