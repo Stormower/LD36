@@ -29,7 +29,6 @@ int main()
 	int nWorkers = 0;
 	while (1)
 	{
-
 		cin >> command;
 		if (command == "w")
 		{
