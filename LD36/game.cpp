@@ -1,6 +1,4 @@
 #include <SFML/Graphics.hpp>
-#include <SFML/Window.hpp>
-#include <string>
 
 class Game {
 private:
@@ -15,8 +13,7 @@ public:
 	void render();
 };
 
-Game::Game()
-	: m_Window(sf::VideoMode(500, 400), "Stratege") {
+Game(): m_Window(sf::VideoMode(500, 400), "Stratege") {
 
 }
 
@@ -37,7 +34,7 @@ void Game::draw() {
 }
 
 void Game::update() {
-	std::string command;
+	string command;
 	int nWorkers = 0;
 	int gold = 0;
 	sf::Clock clock;
@@ -54,10 +51,10 @@ void Game::update() {
 			{
 			case (sf::Keyboard::Key::W) :
 				nWorkers++;
-				std::cout << "recruited a worker" << std::endl;
+				cout << "recruited a worker" << endl;
 				break;
 			case (sf::Keyboard::Key::D) :
-				std::cout << "There are " << nWorkers << " Workers \r\n";
+				cout << "There are " << nWorkers << " Workers \r\n";
 				break;
 			}
 
@@ -70,7 +67,7 @@ void Game::update() {
 
 	if ((newTime.asMilliseconds() - oldTime.asMilliseconds()) >= 1000)
 	{
-		std::cout << "You have " << gold << " gold \r\n";
+		cout << "You have " << gold << " gold \r\n";
 		oldTime = newTime;
 		gold += nWorkers;
 	}	
