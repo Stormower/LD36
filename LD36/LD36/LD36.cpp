@@ -13,7 +13,7 @@ int main()
 	sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
 	string command;
 	int nWorkers = 0;
-	int gold = 0;
+	int gold = 100;
 	sf::Clock clock;
 	sf::Time newTime, oldTime;
 	while (window.isOpen())
@@ -28,8 +28,16 @@ int main()
 				switch (event.key.code)
 				{
 				case (sf::Keyboard::Key::W): 
-					nWorkers++;
-					cout << "recruited a worker" << endl;
+					if (gold - 10 >= 0)
+					{
+						nWorkers++;
+						cout << "Recruited a worker" << endl;
+						gold -= 10;
+					}
+					else
+					{
+						cout << "Not enough gold !" << endl;
+					}
 					break;
 				case (sf::Keyboard::Key::D):
 					cout << "There are " << nWorkers << " Workers \r\n";
