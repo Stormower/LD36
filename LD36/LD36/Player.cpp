@@ -45,3 +45,7 @@ void Player::addResearche(string researchName)
 {
 	m_Researches[researchName] = 1;
 }
+void Player::useGold(int ngold)
+{
+	m_Gold -= ngold;
+}

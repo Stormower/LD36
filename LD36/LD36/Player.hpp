@@ -9,7 +9,7 @@ class Player
 {
 private:
 	string m_Name;
-	int m_Gold;
+	int m_Gold = 21;
 	int m_nWorkers;
 	map <string, bool> m_Researches;
 	//vector m_Units;
@@ -24,4 +24,5 @@ public:
 	void addResearche(string);
 	int getnWorkers();
 	int getGold();
+	void useGold(int);
 };

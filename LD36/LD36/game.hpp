@@ -12,6 +12,8 @@ private:
 	Player m_Player;
 	sf::Time m_NewTime, m_OldTime;
 	sf::Clock m_Clock;
+	sf::Text m_txtGold;
+	sf::Text m_txtWorkers;
 
 public:
 	Game();
